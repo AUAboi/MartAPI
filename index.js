@@ -1,6 +1,6 @@
 // "test": "echo \"Error: no test specified\" && exit 1"
 // "start": "node backend/index.js"
-import {} from "dotenv/config";
+import { } from "dotenv/config";
 import { Server } from "socket.io";
 import express from "express";
 import mongoose from "mongoose";
@@ -38,7 +38,8 @@ app.use(
   //avoid any conflict when make req from frontend to backend
   // "http://localhost:3000", 
   cors({
-    origin: ["http://localhost:3000"],
+    origin: [process.env.FRONTEND_URL,
+      "http://localhost:3000"],
     path: ["GET", "POST", "PATCH", "DELETE"],
     credentials: true,
   })
@@ -76,14 +77,14 @@ app.use("/api", category); //it will hit /api/:nextRoute
 
 // Home Route
 app.get("/", (req, res) => {
-  res.status(200).json({message:"Running the app"})
+  res.status(200).json({ message: "Running the app" })
 });
 
 // const users = [];
 // io.on("connection", (socket) => {
 // try {
 //     // console.log(`user is connected with id: ${socket.id}`);
-  
+
 //   // Handle user registration
 //   socket.on('register', (userId) => {
 //     users[userId] = {sockerId:socket.id,busy:null};
