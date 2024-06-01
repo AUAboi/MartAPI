@@ -1,0 +1,38 @@
+{
+  "name": "eazymartbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Nasir",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cryptr": "^6.3.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.2",
+    "nodemailer": "^6.9.13",
+    "nodemailer-express-handlebars": "^6.1.2",
+    "socket.io": "^4.7.5",
+    "stripe": "^15.8.0",
+    "ua-parser-js": "^1.0.37",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.2"
+  }
+}
